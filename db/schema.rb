@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_17_010435) do
+ActiveRecord::Schema.define(version: 2020_10_17_004559) do
 
   create_table "materials", force: :cascade do |t|
     t.string "name"
     t.string "description"
+    t.integer "pattern_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -27,15 +28,4 @@ ActiveRecord::Schema.define(version: 2020_10_17_010435) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "patterns_materials", force: :cascade do |t|
-    t.integer "pattern_id", null: false
-    t.integer "material_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["material_id"], name: "index_patterns_materials_on_material_id"
-    t.index ["pattern_id"], name: "index_patterns_materials_on_pattern_id"
-  end
-
-  add_foreign_key "patterns_materials", "materials"
-  add_foreign_key "patterns_materials", "patterns"
 end

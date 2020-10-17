@@ -3,6 +3,7 @@ class CreateMaterials < ActiveRecord::Migration[6.0]
     create_table :materials do |t|
       t.string :name
       t.string :description
+      t.integer :pattern_id
 
       t.timestamps
     end
