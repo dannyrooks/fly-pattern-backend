@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  # resources :materials
+  resources :materials
 
   resources :patterns do 
     resources :materials
