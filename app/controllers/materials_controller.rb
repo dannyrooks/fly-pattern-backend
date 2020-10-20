@@ -12,6 +12,7 @@ class MaterialsController < ApplicationController
             render json: material
         else
             render json: {error: 'Error creating material'}
+        end
     end
 
     def show
@@ -39,6 +40,6 @@ class MaterialsController < ApplicationController
     end
 
     def material_params
-        params.require(:material).permit(:name, :description, :pattern_id)
+        params.require(:material).permit(:id, :name, :description, :pattern_id)
     end
 end
