@@ -5,7 +5,9 @@ p3 = Pattern.create(name: "Clouser Minnow", category: "Streamer")
 m1 = Material.create(name: "Hook", description: "Size 14", pattern_id: 1)
 m2 = Material.create(name: "Hook", description: "Size 8", pattern_id: 2)
 m3 = Material.create(name: "Hook", description: "Size 4", pattern_id: 3)
-
+m4 = Material.create(name: "Thread", description: "Yellow", pattern_id: 1)
+m5 = Material.create(name: "Thread", description: "Black", pattern_id: 2)
+m6 = Material.create(name: "Thread", description: "White", pattern_id: 3)
 
 # m4 = Material.create(name: "Saddle Hackle", description: "Grizzly")
 # m5 = Material.create(name: "Maribou", description: "Olive")
