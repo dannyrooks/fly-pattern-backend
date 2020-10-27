@@ -35,7 +35,7 @@ class PatternsController < ApplicationController
     private
 
     def pattern_params
-        param.require(:pattern).permit(:name, :category, :comment)
+        params.require(:pattern).permit(:name, :category, :comment)
     end
 
 end
