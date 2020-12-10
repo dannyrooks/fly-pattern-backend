@@ -15,7 +15,7 @@ class PatternsController < ApplicationController
     end
 
     def show
-        pattern = pattern.find_by(id: params[:id])
+        pattern = Pattern.find_by(id: params[:id])
         render json: pattern
     end
 
@@ -36,7 +36,7 @@ class PatternsController < ApplicationController
 
     def pattern_params
         params.require(:pattern).permit(
-        :name, :category, :comment)
+        :id, :name, :category, :comment)
     end
 
 end
