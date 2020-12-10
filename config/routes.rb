@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   end
 
   
-  resources :materials
+  # resources :materials
 
 end
