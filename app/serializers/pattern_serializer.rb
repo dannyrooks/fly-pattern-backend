@@ -1,6 +1,6 @@
 class PatternSerializer < ActiveModel::Serializer
   attributes :id, :name, :category, :comment
-  has_many :materials
+  has_many :materials, serializer: MaterialSerializer
 
   # attribute :material do |pattern|
   #   mat = pattern.material
